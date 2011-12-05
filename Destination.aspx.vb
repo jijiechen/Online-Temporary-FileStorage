@@ -57,7 +57,7 @@ Partial Class destination
         Implements IComparer(Of FileInfo)
 
         Public Function Compare(ByVal x As System.IO.FileInfo, ByVal y As System.IO.FileInfo) As Integer Implements System.Collections.Generic.IComparer(Of System.IO.FileInfo).Compare
-            Return x.CreationTime > y.CreationTime
+            Return x.CreationTime - y.CreationTime
         End Function
     End Class
 
